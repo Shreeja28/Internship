@@ -1,0 +1,153 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);  /* Slightly darker background for more contrast */
+    width: 40%;
+    min-width: 500px;
+    height: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 20px 0;
+    padding-bottom: 40px;
+    border-radius: 15px; /* Rounded corners for smoother look */
+    box-shadow: rgb(255, 255, 255) 0px 2px 8px, rgb(255, 255, 255) 0px 0px 20px 5px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.timer-display {
+    position: relative;
+    width: 92%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 4%;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 40px; /* Slightly larger font for emphasis */
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgb(255, 255, 255) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
+    transition: transform 0.3s ease;
+}
+
+.timer-display:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.buttons {
+    width: 90%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.S,
+.P,
+.R {
+    width: 120px;
+    height: 50px; /* Bigger button size for better usability */
+    background: linear-gradient(145deg, rgba(81, 255, 0, 0.6), rgba(0, 255, 0, 0.6)); /* Gradient effect */
+    color: white;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border-radius: 10px; /* Smoother corners */
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.S:hover {
+    background: linear-gradient(145deg, rgba(0, 255, 0, 0.7), rgba(81, 255, 0, 0.7));
+    transform: translateY(-4px); /* Hover lift effect */
+    box-shadow: 0 10px 25px rgba(81, 255, 0, 0.5);
+}
+
+.P {
+    background: linear-gradient(145deg, rgba(255, 0, 0, 0.6), rgba(255, 99, 71, 0.6));
+}
+
+.P:hover {
+    background: linear-gradient(145deg, rgba(255, 99, 71, 0.7), rgba(255, 0, 0, 0.7));
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
+}
+
+.R {
+    background: linear-gradient(145deg, rgba(255, 255, 0, 0.6), rgba(255, 255, 255, 0.6));
+}
+
+.R:hover {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 0, 0.7));
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 255, 0, 0.5);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        min-width: unset;
+    }
+
+    .timer-display {
+        font-size: 28px;
+        padding: 30px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .S,
+    .P,
+    .R {
+        width: 100px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        min-width: unset;
+    }
+
+    .timer-display {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .S,
+    .P,
+    .R {
+        width: 90px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

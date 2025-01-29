@@ -1,0 +1,58 @@
+/* Keyframes for octocat-wave animation */
+@keyframes octocat-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-25deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-25deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* On small screens (less than 500px) remove animation but keep scaling */
+@media (max-width: 500px) {
+    .github-corner .octo-arm {
+        animation: none;
+        transform: scale(1.1); /* Slightly enlarge on mobile */
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: none; /* Disable animation on hover for mobile */
+    }
+}
+
+/* Add a glowing effect on hover */
+.github-corner:hover .octo-arm {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.8); /* Glowing effect */
+}
+
+/* Styling for the GitHub corner and octocat */
+.github-corner svg {
+    fill: #fff;
+    transition: fill 0.3s ease; /* Smooth transition for color */
+}
+
+/* Add a color change effect */
+.github-corner:hover svg {
+    fill: #24292f; /* Darker color on hover */
+}
+
+/* Remove the GitHub corner section styles */
+
+/* If you want to fully remove it from your layout, you can also remove the HTML element */
